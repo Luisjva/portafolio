@@ -1,0 +1,40 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.cuerpo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 41.09px auto 1.5rem;
+  grid-template-areas:
+    "nav"
+    "main"
+    "footer";
+  background-color: #fff;
+}
+
+main {
+  grid-area: main;
+  padding-bottom: 50px;
+}
+
+footer {
+  grid-area: footer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #eee;
+}
