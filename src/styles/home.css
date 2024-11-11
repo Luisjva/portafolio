@@ -1,0 +1,80 @@
+.home {
+	width: 100%;
+	min-height: 100vh;
+	height: auto;
+	padding: 1.5vw;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas:
+		"about experience projects projects"
+		"about education  projects projects"
+		"skill skill      contact  cv";
+	gap: 1.5vw;
+}
+
+.home__section {
+	cursor: pointer;
+	transition: 0.5s;
+	position: relative;
+}
+.home__section__modal {
+	border-radius: 1rem;
+	position: absolute;
+	transition: 1s;
+	width: 100%;
+	height: 100%;
+}
+.home__section__modal > div {
+	/* background-color: #2f355199; */
+	color: #fff;
+	height: 100%;
+	border-radius: 1.5rem;
+	overflow: none;
+}
+.home__section__modal:active {
+	transform: scale(0.85);
+}
+.home__section__modal--open {
+	z-index: 100;
+	width: 100.1vw;
+	height: 100vh;
+	max-height: 100vh;
+	border-radius: 0;
+}
+.home__section__modal--open > div {
+	border-radius: 0;
+	overflow: auto;
+}
+.home__section__modal--open:active {
+	transform: scale(1);
+}
+
+.home__section.about-me {
+	grid-area: about;
+}
+.home__section.experience {
+	grid-area: experience;
+}
+.home__section.education {
+	grid-area: education;
+}
+.home__section.projects {
+	grid-area: projects;
+}
+.home__section.skill {
+	grid-area: skill;
+}
+.home__section.contact {
+	grid-area: contact;
+}
+.home__section.cv {
+	grid-area: cv;
+}
+
+.modal-closed {
+	padding: 1.5vw;
+	overflow: hidden;
+	height: 100%;
+}

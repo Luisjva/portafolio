@@ -1,0 +1,11 @@
+.modal__closed--default {
+	transition: 1s;
+	background-color: #2f355199;
+	overflow: hidden;
+	height: auto;
+}
+.modal__open--default {
+	background-color: #1d2133;
+	padding: 5vh 10vw;
+	padding-top: 0;
+}

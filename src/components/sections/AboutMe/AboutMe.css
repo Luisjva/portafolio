@@ -1,0 +1,30 @@
+.about-me__header {
+	display: grid;
+	grid-template-columns: 1fr 1.2fr;
+	background-image: url(/profile.JPG);
+	background-position: center;
+	background-size: cover;
+	padding: 4rem 1rem 1rem 1rem;
+	border-radius: 0.75rem;
+}
+.about-me__header > * {
+	background-color: #e5e5e599;
+	color: #000;
+	padding: 1rem;
+	border-radius: 0.75rem;
+	backdrop-filter: blur(4px);
+}
+
+.about-me__beginnings {
+	margin-top: 5rem;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 1.5rem;
+}
+.about-me__beginnings img {
+	object-fit: "cover";
+}
+
+.about-me__first-works {
+	margin-top: 5rem;
+}
