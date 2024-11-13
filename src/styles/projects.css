@@ -1,0 +1,39 @@
+.projects__container {
+	position: relative;
+	width: 100%;
+	height: calc(100% - 2.5rem);
+	margin-top: 0.5rem;
+	/* border: 1px solid blue; */
+}
+
+.projects__content {
+	padding-left: 45%;
+}
+.projects__content__technologies {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem;
+	margin-top: 0.2rem;
+	margin-bottom: 0.5rem;
+}
+.projects__content__technologies > span {
+	background-color: #fff5;
+	padding: 0 0.5em;
+	font-size: 0.8rem;
+	border-radius: 0.5em;
+}
+.projects__content__actions {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.projects__image {
+	position: absolute;
+	transition: 1s;
+	object-fit: cover;
+	object-position: top;
+	border-radius: 0.5rem;
+}

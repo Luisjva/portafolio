@@ -8,9 +8,9 @@
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(3, auto);
 	grid-template-areas:
-		"about experience projects projects"
-		"about education  projects projects"
-		"skill skill      contact  cv";
+		"about       experience  projects projects"
+		"about       skills   projects projects"
+		"referencies referencies contact  cv";
 	gap: 1.5vw;
 }
 
@@ -57,14 +57,14 @@
 .home__section.experience {
 	grid-area: experience;
 }
-.home__section.education {
-	grid-area: education;
+.home__section.skills {
+	grid-area: skills;
 }
 .home__section.projects {
 	grid-area: projects;
 }
-.home__section.skill {
-	grid-area: skill;
+.home__section.referencies {
+	grid-area: referencies;
 }
 .home__section.contact {
 	grid-area: contact;

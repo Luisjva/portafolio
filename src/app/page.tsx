@@ -4,6 +4,8 @@ import "../styles/home.css";
 import { AboutMe } from "@/components/sections/AboutMe";
 import { Experience } from "@/components/sections/Experience";
 import { colors } from "@/config";
+import { Skills } from "@/components/sections/Skills";
+import { Projects } from "@/components/sections/Projects";
 
 export default function Home() {
 	return (
@@ -15,12 +17,12 @@ export default function Home() {
 		>
 			<HomeContainer name={"about-me"} Section={AboutMe} />
 			<HomeContainer name={"experience"} Section={Experience} />
+			<HomeContainer name={"skills"} Section={Skills} />
+			<HomeContainer name={"projects"} Section={Projects} />
 			{/* 
-			<HomeContainer name={"education"} />
-			<HomeContainer name={"projects"} />
-			<HomeContainer name={"skill"} />
-			<HomeContainer name={"contact"} />
-			<HomeContainer name={"cv"} /> 
+				<HomeContainer name={"referencies"} Section={Experience} />
+				<HomeContainer name={"contact"} Section={Experience} />
+				<HomeContainer name={"cv"} Section={Experience} /> 
 			*/}
 		</main>
 	);

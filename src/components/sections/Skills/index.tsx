@@ -4,9 +4,10 @@ import { ActionIcon, Box } from "@mantine/core";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { colors } from "@/config";
 import { MouseEventHandler } from "react";
-import { ExperienceClosed } from "./ExperienceContent";
+import { SkillsContents } from "./SkillsContents";
+// import { ExperienceContent } from "./ExperienceContent";
 
-export const Experience: React.FC<{
+export const Skills: React.FC<{
 	open: boolean;
 	handleClosed: MouseEventHandler<HTMLButtonElement> | undefined;
 }> = ({ open, handleClosed }) => {
@@ -38,7 +39,7 @@ export const Experience: React.FC<{
 			) : (
 				""
 			)}
-			<ExperienceClosed open={open} />
+			<SkillsContents open={open} />
 		</div>
 	);
 };
