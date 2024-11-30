@@ -10,27 +10,23 @@ export const container = {
 		scale: 1,
 
 		transition: {
-			delay: 1,
+			delay: 0.75,
 			delayChildren: 1,
 			staggerChildren: 0.6,
 		},
 	},
 };
 
-// const item = {
-// 	hidden: { y: 20, opacity: 0 },
-// 	visible: {
-// 		y: 0,
-// 		opacity: 1,
-// 	},
-// };
-
-export const AboutMeOpen = () => {
+export const AboutMeContent: React.FC<{ open: boolean }> = ({ open }) => {
 	return (
-		<div className="about-me">
-			<Header />
-			<Beginnings />
-			<FirstWorks />
+		<div className={`about-me ${open && "open"}`}>
+			<Header open={open} />
+			{open && (
+				<>
+					<Beginnings />
+					<FirstWorks />
+				</>
+			)}
 		</div>
 	);
 };

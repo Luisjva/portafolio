@@ -1,7 +1,8 @@
 import { Box, Text } from "@mantine/core";
 import { motion } from "framer-motion";
-import { container } from "../AboutMeOpen";
+import { container } from "../AboutMeContent";
 import Image from "next/image";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 
 export const AboutMeMyBeginnings = () => (
 	<motion.div
@@ -10,7 +11,7 @@ export const AboutMeMyBeginnings = () => (
 		animate="visible"
 		className="about-me__beginnings"
 	>
-		<Box
+		{/* <Box
 			style={{
 				position: "relative",
 				height: "35vw",
@@ -101,7 +102,44 @@ export const AboutMeMyBeginnings = () => (
 					</Box>
 				</Box>
 			</Box>
-		</Box>
+		</Box> */}
+
+		<PhotoProvider>
+			<Box className="about-me__beginnings__images">
+				<PhotoView src={"/proy7.webp"}>
+					<Box className="big">
+						<Image
+							src="/proy7.webp"
+							alt="Picture of the author"
+							fill={true}
+							style={{ objectFit: "cover", objectPosition: "top" }}
+						/>
+					</Box>
+				</PhotoView>
+
+				<PhotoView src={"/first-proyect.jpeg"}>
+					<Box className="secondary">
+						<Image
+							src="/first-proyect.jpeg"
+							alt="Picture of the author"
+							fill={true}
+							style={{ objectFit: "cover", objectPosition: "top" }}
+						/>
+					</Box>
+				</PhotoView>
+				<PhotoView src={"/proy4.webp"}>
+					<Box className="last">
+						<Image
+							src="/proy4.webp"
+							alt="Picture of the author"
+							fill={true}
+							style={{ objectFit: "cover", objectPosition: "top" }}
+						/>
+					</Box>
+				</PhotoView>
+			</Box>
+		</PhotoProvider>
+
 		<Box>
 			<Text
 				style={{
@@ -130,8 +168,8 @@ export const AboutMeMyBeginnings = () => (
 			>
 				Cuando comenzó la pandemia y tuve mucho tiempo libre, decidí aprender{" "}
 				<b>HTML</b> a través de cursos en YouTube con la idea de crear páginas
-				web atractivas. Al principio, mis páginas no eran muy bonitas, pero al
-				aprender <b>CSS</b> y poder agregar estilos, todo mejoró
+				web atractivas. Al principio, mis páginas no eran muy llamativas, pero
+				al aprender <b>CSS</b> y poder agregar estilos, todo mejoró
 				considerablemente. Sin embargo, aún necesitaba mejorar mucho mis
 				habilidades de programación.
 				<br />

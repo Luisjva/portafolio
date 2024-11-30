@@ -1,5 +1,6 @@
 import "@mantine/core/styles.css";
 import "./globals.css";
+import "react-photo-view/dist/react-photo-view.css";
 import { createTheme, MantineProvider } from "@mantine/core";
 
 const theme = createTheme({

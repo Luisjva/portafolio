@@ -1,17 +1,18 @@
 import { ActionIcon, Box } from "@mantine/core";
-import { AboutMeContent } from "./AboutMeContent";
-import { XMarkIcon } from "@heroicons/react/24/solid";
+// import { AboutMeClosed } from "./AboutMeClosed";
+// import { AboutMeOpen } from "./AboutMeOpen";
 import { colors } from "@/config";
+import { XMarkIcon } from "@heroicons/react/24/solid";
 import { MouseEventHandler } from "react";
-import "@/styles/modals.css";
+import { ReferenciesContent } from "./ReferenciesContent";
 
-export const AboutMe: React.FC<{
+export const Referencies: React.FC<{
 	open: boolean;
 	handleClosed: MouseEventHandler<HTMLButtonElement> | undefined;
 }> = ({ open, handleClosed }) => {
 	return (
 		<div className={`modal__closed--default ${open && "modal__open--default"}`}>
-			{open && (
+			{open ? (
 				<Box style={{ position: "relative" }}>
 					<Box
 						style={{
@@ -34,8 +35,10 @@ export const AboutMe: React.FC<{
 						</ActionIcon>
 					</Box>
 				</Box>
+			) : (
+				""
 			)}
-			<AboutMeContent open={open} />
+			<ReferenciesContent open={open} />
 		</div>
 	);
 };

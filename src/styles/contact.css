@@ -1,0 +1,10 @@
+.contact__container {
+	/* background-color: #fff; */
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 1vw;
+	margin: auto;
+	width: 33vh;
+}

@@ -2,16 +2,16 @@
 	width: 100%;
 	min-height: 100vh;
 	height: auto;
-	padding: 1.5vw;
+	padding: 1vw;
 
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(3, auto);
+	grid-template-columns: 25% 25% auto 1fr;
+	grid-template-rows: repeat(3, 1fr);
 	grid-template-areas:
 		"about       experience  projects projects"
-		"about       skills   projects projects"
-		"referencies referencies contact  cv";
-	gap: 1.5vw;
+		"about       skills      projects projects"
+		"referencies referencies contact cv";
+	gap: 1vw;
 }
 
 .home__section {
@@ -27,10 +27,9 @@
 	height: 100%;
 }
 .home__section__modal > div {
-	/* background-color: #2f355199; */
 	color: #fff;
 	height: 100%;
-	border-radius: 1.5rem;
+	border-radius: 1rem;
 	overflow: none;
 }
 .home__section__modal:active {
@@ -42,6 +41,8 @@
 	height: 100vh;
 	max-height: 100vh;
 	border-radius: 0;
+	cursor: default;
+	/* position: absolute; */
 }
 .home__section__modal--open > div {
 	border-radius: 0;
@@ -51,25 +52,25 @@
 	transform: scale(1);
 }
 
-.home__section.about-me {
+.home__about-me {
 	grid-area: about;
 }
-.home__section.experience {
+.home__experience {
 	grid-area: experience;
 }
-.home__section.skills {
+.home__skills {
 	grid-area: skills;
 }
-.home__section.projects {
+.home__projects {
 	grid-area: projects;
 }
-.home__section.referencies {
+.home__referencies {
 	grid-area: referencies;
 }
-.home__section.contact {
+.home__contact {
 	grid-area: contact;
 }
-.home__section.cv {
+.home__cv {
 	grid-area: cv;
 }
 
@@ -77,4 +78,52 @@
 	padding: 1.5vw;
 	overflow: hidden;
 	height: 100%;
+}
+.modal-open {
+	overflow: hidden;
+	height: auto;
+}
+
+@media (max-width: 900px) or (min-height: 85vw) {
+	.home {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 15rem 30rem 15rem 15rem;
+		grid-template-areas:
+			"about       about       experience"
+			"projects    projects    projects"
+			"referencies referencies referencies"
+			"skills      contact     cv";
+		gap: 1rem;
+		padding: 1rem;
+		overflow: auto;
+		height: 100vh;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.home {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 15rem 15rem 40rem 15rem;
+		grid-template-areas:
+			"about       about"
+			"skills      experience"
+			"projects    projects"
+			"referencies referencies"
+			"contact     cv";
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.home {
+		grid-template-columns: 1fr;
+		grid-template-rows: 15rem 10rem auto 25rem 15rem;
+		grid-template-areas:
+			"about"
+			"experience"
+			"skills"
+			"projects"
+			"referencies"
+			"contact"
+			"cv";
+	}
 }

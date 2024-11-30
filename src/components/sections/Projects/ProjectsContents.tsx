@@ -36,7 +36,7 @@ export const ProjectsContents: React.FC<{ open: boolean }> = ({ open }) => {
 
 	return (
 		<motion.div
-			className={`modal-closed ${open && "modal-open"}`}
+			className={`modal-closed ${open && "modal-open open"}`}
 			variants={container}
 			initial="hidden"
 			animate="visible"

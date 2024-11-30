@@ -2,7 +2,7 @@ import { colors } from "@/config";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Box, Button, Text } from "@mantine/core";
 import { motion } from "framer-motion";
-import { container } from "../AboutMeOpen";
+import { container } from "../AboutMeContent";
 
 export const AboutMeFirstWorks = () => (
 	<motion.div
@@ -13,7 +13,6 @@ export const AboutMeFirstWorks = () => (
 	>
 		<Box
 			style={{
-				width: "35vw",
 				maxWidth: 500,
 			}}
 		>
@@ -39,7 +38,7 @@ export const AboutMeFirstWorks = () => (
 				<Button
 					variant="light"
 					rightSection={<ArrowRightIcon width="1rem" />}
-					color={colors.blue.main}
+					color={colors.blue.light}
 					mt={"1rem"}
 				>
 					Ver toda la experiencia laboral

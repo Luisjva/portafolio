@@ -1,5 +1,5 @@
 import { workExperience } from "@/constants";
-import { Text, Timeline } from "@mantine/core";
+import { Box, Text, Timeline } from "@mantine/core";
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
@@ -30,11 +30,13 @@ export const ExperienceClosed: React.FC<{ open: boolean }> = ({ open }) => {
 
 	useEffect(() => {
 		if (open) {
-			setOpenDelay(open);
+			setTimeout(() => {
+				setOpenDelay(open);
+			}, 150);
 		} else {
 			setTimeout(() => {
 				setOpenDelay(open);
-			}, 400);
+			}, 300);
 		}
 	}, [open, setOpenDelay]);
 
@@ -63,17 +65,19 @@ export const ExperienceClosed: React.FC<{ open: boolean }> = ({ open }) => {
 							key={item.enterpriseName}
 							bullet={<item.icon />}
 							title={item.enterpriseName}
-							style={{
-								color: "#fff",
-							}}
 						>
+							<Text c="dimmed" size="sm">
+								{item.jobPosition} ({item.durationTime})
+							</Text>
 							{openDelay ? (
-								item.jobDescription
+								<Box style={{ marginTop: ".5rem" }}>{item.jobDescription}</Box>
 							) : (
-								<Text>
-									{item.jobDescriptionShort.substring(0, 50)}
-									{item.jobDescriptionShort.length > 50 ? "..." : ""}
-								</Text>
+								<>
+									<Text>
+										{item.jobDescriptionShort.substring(0, 60)}
+										{item.jobDescriptionShort.length > 50 ? "..." : ""}
+									</Text>
+								</>
 							)}
 						</Timeline.Item>
 					))}

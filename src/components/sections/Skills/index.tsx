@@ -1,45 +1,56 @@
-import { ActionIcon, Box } from "@mantine/core";
-// import { AboutMeClosed } from "./AboutMeClosed";
-// import { AboutMeOpen } from "./AboutMeOpen";
-import { XMarkIcon } from "@heroicons/react/24/solid";
-import { colors } from "@/config";
-import { MouseEventHandler } from "react";
-import { SkillsContents } from "./SkillsContents";
-// import { ExperienceContent } from "./ExperienceContent";
+import { skillsList } from "@/constants/skillsList";
+import { Badge, Box, Text } from "@mantine/core";
+import { motion } from "framer-motion";
 
-export const Skills: React.FC<{
-	open: boolean;
-	handleClosed: MouseEventHandler<HTMLButtonElement> | undefined;
-}> = ({ open, handleClosed }) => {
+const container = {
+	hidden: { opacity: 1, scale: 0 },
+	visible: {
+		opacity: 1,
+		scale: 1,
+
+		transition: {
+			delay: 0.5,
+			delayChildren: 0.3,
+			staggerChildren: 0.5,
+		},
+	},
+};
+
+const item = {
+	hidden: { y: 20, opacity: 0 },
+	visible: {
+		y: 0,
+		opacity: 1,
+	},
+};
+
+export const Skills = () => {
 	return (
-		<div className={`modal__closed--default ${open && "modal__open--default"}`}>
-			{open ? (
-				<Box style={{ position: "relative" }}>
-					<Box
-						style={{
-							position: "sticky",
-							margin: "1rem 0vw",
-							top: "1rem",
-							zIndex: 100,
-							display: "flex",
-							justifyContent: "end",
-						}}
-					>
-						<ActionIcon
-							variant="filled"
-							aria-label="Settings"
-							onClick={handleClosed}
-							color={colors.primary}
-							style={{ position: "absolute", right: "-5vw" }}
-						>
-							<XMarkIcon style={{ width: "70%", height: "70%" }} />
-						</ActionIcon>
-					</Box>
+		<motion.div variants={container} initial="hidden" animate="visible">
+			<motion.div variants={item}>
+				<Text
+					style={{ fontWeight: 600, fontSize: "1.2rem", textAlign: "center" }}
+				>
+					Habilidades técnicas
+				</Text>
+			</motion.div>
+			<motion.div variants={item}>
+				<Box
+					style={{
+						display: "flex",
+						flexWrap: "wrap",
+						justifyContent: "left",
+						gap: ".5rem",
+						marginTop: "1rem",
+					}}
+				>
+					{skillsList.map((item) => (
+						<Badge variant="outline" color="blue" size="lg" key={item}>
+							{item}
+						</Badge>
+					))}
 				</Box>
-			) : (
-				""
-			)}
-			<SkillsContents open={open} />
-		</div>
+			</motion.div>
+		</motion.div>
 	);
 };

@@ -5,7 +5,7 @@ export const ProjectsImgList: React.FC<{
 	projectActiveId: number;
 	open: boolean;
 	changeProjectActiveId: (newIndex: any) => void;
-}> = ({ projectActiveId, changeProjectActiveId }) => {
+}> = ({ changeProjectActiveId }) => {
 	const [projectsListSort, setProjectList] = useState(projectList);
 
 	const handleClickImg = (projectActive: any) => {
@@ -26,6 +26,7 @@ export const ProjectsImgList: React.FC<{
 				return item;
 			});
 		});
+		changeProjectActiveId(projectActive);
 	};
 
 	return (
@@ -35,17 +36,7 @@ export const ProjectsImgList: React.FC<{
 					key={item.id}
 					src={item.img}
 					alt={`imagen del proyecto ${item.name}`}
-					className="projects__image"
-					style={{
-						width: item.position === 0 ? "40%" : "17.5%",
-						height: item.position === 0 ? "100%" : "50%",
-						top: item.position === 0 ? "0%" : "50%",
-						left:
-							item.position === 0
-								? "0%"
-								: `calc(45% + ${(item.position - 1) * 19}%)`,
-						zIndex: 1000 / item.position,
-					}}
+					className={`projects__image p${item.position}`}
 					onClick={() => handleClickImg(item)}
 				/>
 			))}

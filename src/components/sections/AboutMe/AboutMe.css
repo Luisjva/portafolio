@@ -1,30 +1,163 @@
-.about-me__header {
-	display: grid;
-	grid-template-columns: 1fr 1.2fr;
-	background-image: url(/profile.JPG);
-	background-position: center;
-	background-size: cover;
-	padding: 4rem 1rem 1rem 1rem;
-	border-radius: 0.75rem;
+.about-me {
+	height: 100%;
 }
-.about-me__header > * {
+
+.about-me__header {
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
+	position: relative;
+}
+.open .about-me__header {
+	height: auto;
+	padding: 15rem 1rem 1rem 1rem;
+}
+.about-me__header__container {
+	width: 100%;
+	transition: 0.9s;
+}
+.open .about-me__header__container {
+	width: 60%;
 	background-color: #e5e5e599;
 	color: #000;
 	padding: 1rem;
 	border-radius: 0.75rem;
 	backdrop-filter: blur(4px);
+	transition: 1.25s;
+	position: relative;
+}
+.about-me__header__image {
+	background-image: url(/profile.JPG);
+	background-position: center;
+	background-size: cover;
+	width: 3.5rem;
+	height: 3.5rem;
+	position: absolute;
+	border-radius: 0.5rem;
+	transition: 1.25s;
+}
+.open .about-me__header__image {
+	background-position: 50% 40%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 0.75rem;
+	transition: 0.75s;
+}
+.about-me__header__name {
+	margin-left: 4.25rem;
+	margin-bottom: 0.5rem;
+}
+.open .about-me__header__name {
+	margin-left: 0;
+}
+.about-me__header__title {
+	font-size: 1.5rem;
+}
+.open .about-me__header__title {
+	font-size: 2rem;
 }
 
 .about-me__beginnings {
-	margin-top: 5rem;
+	margin: 3rem auto;
 	display: grid;
 	grid-template-columns: auto 1fr;
 	gap: 1.5rem;
+}
+.about-me__beginnings__images {
+	display: grid;
+	grid-template-columns: 1.75fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: "big secondary" "big last";
+	gap: 0.75rem;
+	width: 33vw;
+	height: 33vw;
+	margin: auto;
+}
+.about-me__beginnings__images > * {
+	background-color: #fff3;
+	border-radius: 0.75rem;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+.about-me__beginnings__images .big {
+	grid-area: big;
+}
+.about-me__beginnings__images .secondary {
+	grid-area: secondary;
+}
+.about-me__beginnings__images .last {
+	grid-area: last;
 }
 .about-me__beginnings img {
 	object-fit: "cover";
 }
 
 .about-me__first-works {
-	margin-top: 5rem;
+	padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+	.about-me__beginnings__images {
+		margin: 3rem auto;
+	}
+}
+@media screen and (max-width: 900px) {
+	.open .about-me__header__container {
+		width: 80%;
+	}
+}
+@media screen and (max-width: 700px) {
+	.open .about-me__header__container {
+		width: 100%;
+	}
+	.open .about-me__header__image {
+		background-position: 50% 50%;
+	}
+
+	.about-me__beginnings {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 1.5rem;
+	}
+	.about-me__beginnings__images {
+		margin: 0 auto;
+	}
+	.about-me__beginnings__images {
+		width: 70vw;
+		height: 70vw;
+	}
+}
+@media screen and (max-width: 600px) {
+	.open .about-me__header {
+		padding: 10rem 1rem 1rem 1rem;
+	}
+	.open .about-me__header__image {
+		background-position: 50% 60%;
+	}
+	.about-me__header__title {
+		font-size: 1.2rem;
+	}
+	.open .about-me__header__title {
+		font-size: 1.2rem;
+	}
+	.about-me__header {
+		padding: 0.5rem;
+	}
+}
+@media screen and (max-width: 400px) {
+	.open .about-me__header {
+		padding: 5rem 1rem 1rem 1rem;
+	}
+	.open .about-me__header__image {
+		background-position: 50% 100%;
+	}
+	.open .about-me__header {
+		padding: 10rem 0.5rem 0.5rem 0.5rem;
+	}
+	.about-me__header__content {
+		font-size: 0.9rem;
+	}
 }
