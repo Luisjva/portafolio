@@ -17,9 +17,11 @@ export default function Home() {
 	useEffect(() => {
 		const init = () => {
 			const home = document.querySelector(".home");
+
 			home?.addEventListener("scroll", () => {
 				setScrollTop(home.scrollTop);
 			});
+
 			home?.addEventListener("resize", () => {
 				setScrollTop(home.scrollTop);
 			});
