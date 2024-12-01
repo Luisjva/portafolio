@@ -27,7 +27,7 @@ export const workExperience = [
 					tareas repetitivas.
 				</List.Item>
 				<List.Item>
-					<b>Optimice de forma satisfactoria en un 50%</b> el rendimiento de 3
+					<b>Optimicé de forma satisfactoria en un 50%</b> el rendimiento de 3
 					proyectos existentes de la empresa a través de la modularización de
 					los componentes existentes y adición de nuevos componentes.
 				</List.Item>
@@ -68,7 +68,7 @@ export const workExperience = [
 		jobDescription: (
 			<List spacing="md" center>
 				<List.Item>
-					<b>Desarrollé y optimicé proyectos de diversa índole</b>, asumiendo
+					<b>Desarrollé y optimicé proyectos de diversa índole</b> asumiendo
 					roles de soporte para corregir y mejorar funcionalidades existentes,
 					así como resolver bugs, reduciendo hasta un 15% los tiempos de carga
 					de los productos del cliente.

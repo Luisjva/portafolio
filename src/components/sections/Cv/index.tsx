@@ -1,10 +1,6 @@
+import { Box, Text } from "@mantine/core";
 import { motion } from "framer-motion";
-import { ActionIcon, Box, Text } from "@mantine/core";
-// import { AboutMeClosed } from "./AboutMeClosed";
-// import { AboutMeOpen } from "./AboutMeOpen";
-import { colors } from "@/config";
-import { XMarkIcon } from "@heroicons/react/24/solid";
-import { MouseEventHandler, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const container = {
 	hidden: { opacity: 1, scale: 0 },
@@ -30,8 +26,7 @@ const item = {
 
 export const Cv: React.FC<{
 	open: boolean;
-	handleClosed: MouseEventHandler<HTMLButtonElement> | undefined;
-}> = ({ open, handleClosed }) => {
+}> = ({ open }) => {
 	const [delayOpen, setDelayOpen] = useState(open);
 
 	useEffect(() => {
@@ -42,32 +37,6 @@ export const Cv: React.FC<{
 
 	return (
 		<div className={`modal__closed--default ${open && "modal__open--default"}`}>
-			{open ? (
-				<Box style={{ position: "relative" }}>
-					<Box
-						style={{
-							position: "sticky",
-							margin: "1rem 0vw",
-							top: "1rem",
-							zIndex: 100,
-							display: "flex",
-							justifyContent: "end",
-						}}
-					>
-						<ActionIcon
-							variant="filled"
-							aria-label="Settings"
-							onClick={handleClosed}
-							color={colors.primary}
-							style={{ position: "absolute", right: "-5vw" }}
-						>
-							<XMarkIcon style={{ width: "70%", height: "70%" }} />
-						</ActionIcon>
-					</Box>
-				</Box>
-			) : (
-				""
-			)}
 			<motion.div
 				variants={container}
 				initial="hidden"

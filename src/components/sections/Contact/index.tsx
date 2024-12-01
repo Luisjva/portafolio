@@ -16,13 +16,6 @@ const container = {
 		},
 	},
 };
-// const item = {
-// 	hidden: { y: 20, opacity: 0 },
-// 	visible: {
-// 		y: 0,
-// 		opacity: 1,
-// 	},
-// };
 
 export const Contact = () => {
 	return (

@@ -61,15 +61,19 @@
 }
 .projects__image.p1 {
 	left: calc(45% + 0%);
+	z-index: 100;
 }
 .projects__image.p2 {
 	left: calc(45% + 19%);
+	z-index: 90;
 }
 .projects__image.p3 {
 	left: calc(45% + 38%);
+	z-index: 80;
 }
 .projects__image.p4 {
 	left: calc(45% + 57%);
+	z-index: 70;
 }
 
 @media screen and (max-width: 900px) {

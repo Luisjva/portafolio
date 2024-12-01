@@ -20,9 +20,9 @@ export default function Home() {
 			home?.addEventListener("scroll", () => {
 				setScrollTop(home.scrollTop);
 			});
-			// home?.addEventListener("resize", () => {
-			// 	setScrollTop(home.scrollTop);
-			// });
+			home?.addEventListener("resize", () => {
+				setScrollTop(home.scrollTop);
+			});
 		};
 		init();
 	}, []);

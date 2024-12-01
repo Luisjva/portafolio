@@ -14,6 +14,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
+			<head>
+				<meta name="theme-color" content="#2F3551" />
+			</head>
 			<body>
 				<MantineProvider theme={theme}>{children}</MantineProvider>
 			</body>

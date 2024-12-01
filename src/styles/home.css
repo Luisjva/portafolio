@@ -33,23 +33,38 @@
 	overflow: none;
 }
 .home__section__modal:active {
-	transform: scale(0.85);
+	transform: scale(0.9);
+}
+.home__section__modal > .close-button {
+	position: absolute;
+	display: flex;
+	justify-content: end;
+	width: 100%;
+	padding: 0.6rem 5%;
+	transition: 0.5s;
+	opacity: 0;
+	z-index: -1;
 }
 .home__section__modal--open {
 	z-index: 100;
-	width: 100.1vw;
+	width: 100.2vw;
 	height: 100vh;
 	max-height: 100vh;
 	border-radius: 0;
 	cursor: default;
-	/* position: absolute; */
 }
 .home__section__modal--open > div {
 	border-radius: 0;
-	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-top: 2.5rem;
 }
 .home__section__modal--open:active {
 	transform: scale(1);
+}
+.home__section__modal--open > .close-button {
+	opacity: 1;
+	z-index: 100;
 }
 
 .home__about-me {
@@ -111,6 +126,13 @@
 			"referencies referencies"
 			"contact     cv";
 	}
+	.home__section__modal--open > div {
+		padding-top: 3rem;
+	}
+	/* 
+	.home__section__modal > .close-button {
+		padding: 1rem 2.55%;
+	} */
 }
 
 @media screen and (max-width: 450px) {
@@ -125,5 +147,8 @@
 			"referencies"
 			"contact"
 			"cv";
+	}
+	.home__section__modal > .close-button {
+		padding: 0.5rem;
 	}
 }
