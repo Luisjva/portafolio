@@ -11,40 +11,65 @@ const HomeContainer: React.FC<{
 		open: boolean;
 	}>;
 }> = ({ name, Section, cantOpen, scrollTop }) => {
-	const [isOpen, setIsOpen] = useState(false);
-	const contenedor = useRef<HTMLDivElement>(null);
+	const container = useRef<HTMLDivElement>(null);
 	const modal = useRef<HTMLDivElement>(null);
+	const [isOpen, setIsOpen] = useState(false);
+	const [leftOpen, setLeftOpen] = useState(0);
+	const [topOpen, setTopOpen] = useState(0);
 	scrollTop = scrollTop || 0;
-	const [left, setLeft] = useState<number | null>(null);
-	const [top, setTop] = useState<number | null>(null);
 
 	const handleOpen = () => {
 		const container = document.querySelector(".home") as any;
-		console.log("open", container);
 		if (container) {
 			container.style.overflow = "hidden";
 		}
 
 		setIsOpen(true);
 	};
-	const handleClosed = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-		const container = document.querySelector(".home") as any;
+	const handleClosed = (e: Event) => {
 		e.stopPropagation();
+		setIsOpen(false);
+		const container = document.querySelector(".home") as any;
 		if (container) {
 			container.style.overflow = "auto";
 		}
-		setIsOpen(false);
+	};
+
+	const handlePositionOpen = () => {
+		const container = document.querySelector(`.home__${name}`) as any;
+		if (container?.offsetLeft) {
+			setLeftOpen(-container.offsetLeft - 1);
+		} else {
+			setLeftOpen(0);
+		}
+
+		if (container?.offsetTop) {
+			setTopOpen(-container.offsetTop + scrollTop);
+		} else {
+			setTopOpen(0);
+		}
 	};
 
 	useEffect(() => {
-		if (!cantOpen) {
-			window.addEventListener("resize", () => {
-				const contenedor = document.querySelector(`.home__${name}`) as any;
-				setLeft(-contenedor?.offsetLeft - 1);
-				setTop(-contenedor?.offsetTop + scrollTop);
-			});
-		}
+		const homeContainer = document.querySelector(".home");
+		window.addEventListener("resize", (e) => {
+			handleClosed(e);
+			handlePositionOpen();
+		});
+		homeContainer?.addEventListener("scroll", (e) => {
+			e.preventDefault();
+			handlePositionOpen();
+		});
+
+		return () => {
+			window.removeEventListener("resize", handlePositionOpen);
+			homeContainer?.removeEventListener("scroll", handlePositionOpen);
+		};
 	}, []);
+
+	useEffect(() => {
+		handlePositionOpen();
+	}, [scrollTop]);
 
 	if (cantOpen) {
 		return (
@@ -58,7 +83,7 @@ const HomeContainer: React.FC<{
 		<div
 			className={`home__section home__${name}`}
 			onClick={handleOpen}
-			ref={contenedor}
+			ref={container}
 		>
 			<div
 				className={`home__section__modal ${
@@ -66,28 +91,12 @@ const HomeContainer: React.FC<{
 				}`}
 				ref={modal}
 				style={{
-					left: !isOpen
-						? 0
-						: left
-						? left
-						: contenedor?.current?.offsetLeft
-						? -contenedor?.current?.offsetLeft - 1
-						: 0,
-					top: !isOpen
-						? 0
-						: top
-						? top
-						: contenedor?.current?.offsetTop
-						? -contenedor?.current?.offsetTop + scrollTop
-						: 0,
+					left: !isOpen ? 0 : leftOpen,
+					top: !isOpen ? 0 : topOpen,
 				}}
 			>
 				<span className="close-button">
-					<ActionIcon
-						variant="light"
-						radius="sm"
-						onClick={(e) => handleClosed(e)}
-					>
+					<ActionIcon variant="light" radius="sm" onClick={handleClosed}>
 						<XMarkIcon style={{ width: "70%", height: "70%" }} />
 					</ActionIcon>
 				</span>

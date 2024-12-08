@@ -16,15 +16,18 @@ export default function Home() {
 
 	useEffect(() => {
 		const init = () => {
-			const home = document.querySelector(".home");
-
-			home?.addEventListener("scroll", () => {
-				setScrollTop(home.scrollTop);
-			});
-
-			home?.addEventListener("resize", () => {
-				setScrollTop(home.scrollTop);
-			});
+			const homeContainer = document.querySelector(".home");
+			const handleScroll = () => {
+				setScrollTop(homeContainer?.scrollTop || 0);
+			};
+			// Agregar el event listener
+			window.addEventListener("resize", handleScroll);
+			homeContainer?.addEventListener("scroll", handleScroll);
+			// Limpiar el event listener cuando el componente se desmonte
+			return () => {
+				window.removeEventListener("resize", handleScroll);
+				homeContainer?.removeEventListener("scroll", handleScroll);
+			};
 		};
 		init();
 	}, []);
@@ -46,7 +49,12 @@ export default function Home() {
 				Section={Experience}
 				scrollTop={scrollTop}
 			/>
-			<HomeContainer name={"skills"} Section={Skills} cantOpen={true} />
+			<HomeContainer
+				name={"skills"}
+				Section={Skills}
+				cantOpen={true}
+				scrollTop={scrollTop}
+			/>
 			<HomeContainer
 				name={"projects"}
 				Section={Projects}
@@ -57,8 +65,13 @@ export default function Home() {
 				Section={Referencies}
 				scrollTop={scrollTop}
 			/>
-			<HomeContainer name={"cv"} Section={Cv} />
-			<HomeContainer name={"contact"} Section={Contact} cantOpen={true} />
+			<HomeContainer name={"cv"} Section={Cv} scrollTop={scrollTop} />
+			<HomeContainer
+				name={"contact"}
+				Section={Contact}
+				cantOpen={true}
+				scrollTop={scrollTop}
+			/>
 		</main>
 	);
 }

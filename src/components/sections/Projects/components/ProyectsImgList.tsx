@@ -17,8 +17,6 @@ export const ProjectsImgList: React.FC<{
 
 		const list = part1.concat(part2);
 
-		console.log(list);
-
 		setProjectList(() => {
 			return projectList.map((item) => {
 				item.position = list.findIndex((project) => item.id === project.id);
