@@ -138,7 +138,7 @@
 @media screen and (max-width: 450px) {
 	.home {
 		grid-template-columns: 1fr;
-		grid-template-rows: 15rem 10rem auto 25rem 15rem;
+		grid-template-rows: 15rem 10rem auto 30rem 15rem;
 		grid-template-areas:
 			"about"
 			"experience"

@@ -2,8 +2,6 @@ import { projectList } from "@/constants/projectsList";
 import React, { useState } from "react";
 
 export const ProjectsImgList: React.FC<{
-	projectActiveId: number;
-	open: boolean;
 	changeProjectActiveId: (newIndex: any) => void;
 }> = ({ changeProjectActiveId }) => {
 	const [projectsListSort, setProjectList] = useState(projectList);

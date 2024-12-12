@@ -9,4 +9,6 @@
 	/* fonts */
 	font-family: "Roboto", sans-serif;
 	color: #fff;
+
+	scroll-behavior: smooth;
 }

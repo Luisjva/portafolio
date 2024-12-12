@@ -31,6 +31,10 @@ export const ProjectsContents: React.FC<{ open: boolean }> = ({ open }) => {
 	const [projectActive, setProjectActive] = useState(projectList[0]);
 
 	const changeProjectActiveId = (newId: any) => {
+		const container = document.querySelector(".projects__content");
+
+		container?.scroll({ top: 0 });
+
 		setProjectActive(newId);
 	};
 
@@ -46,18 +50,16 @@ export const ProjectsContents: React.FC<{ open: boolean }> = ({ open }) => {
 			</motion.div>
 			<motion.div variants={item} className="projects__container">
 				<div className="projects__content">
-					<ProjectsImgList
-						projectActiveId={projectActive.id}
-						open={open}
-						changeProjectActiveId={changeProjectActiveId}
-					/>
-					<h3>{projectActive.name}</h3>
-					<p className="projects__content__technologies">
-						{projectActive.technologies.map((value) => (
-							<span key={value}>{value}</span>
-						))}
-					</p>
-					<p>{projectActive.description}</p>
+					<div className="projects__info">
+						<ProjectsImgList changeProjectActiveId={changeProjectActiveId} />
+						<h3>{projectActive.name}</h3>
+						<p className="projects__content__technologies">
+							{projectActive.technologies.map((value) => (
+								<span key={value}>{value}</span>
+							))}
+						</p>
+						<div>{projectActive.description()}</div>
+					</div>
 					<div className="projects__content__actions">
 						<Button color="#fff5" radius={"md"}>
 							Ver código
