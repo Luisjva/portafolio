@@ -26,7 +26,7 @@ const HomeContainer: React.FC<{
 
 		setIsOpen(true);
 	};
-	const handleClosed = (e: Event) => {
+	const handleClosed = (e: any) => {
 		e.stopPropagation();
 		setIsOpen(false);
 		const container = document.querySelector(".home") as any;
