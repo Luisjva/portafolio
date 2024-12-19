@@ -16,6 +16,11 @@ export default function RootLayout({
 		<html lang="en">
 			<head>
 				<meta name="theme-color" content="#2F3551" />
+				<title>Portafolio - Luis Villegas</title>
+				<meta
+					name="description"
+					content="Portafolio de un desarrollador web especializado en React. Explora proyectos innovadores y de alto rendimiento que demuestran habilidades avanzadas en desarrollo frontend y backend, optimización del rendimiento y diseño de interfaces intuitivas."
+				/>
 			</head>
 			<body>
 				<MantineProvider theme={theme}>{children}</MantineProvider>

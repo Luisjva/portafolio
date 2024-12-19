@@ -8,8 +8,8 @@ export const projectList = [
 					Este portafolio fue creado hace tres años para demostrar mis
 					habilidades en maquetación de páginas web. En él, presenté una serie
 					de proyectos que reflejan mi capacidad para diseñar y estructurar
-					páginas web básicas, utilizando las tecnologías y técnicas disponibles
-					en ese momento.
+					páginas web básicas, utilizando las tecnologías y técnicas que
+					dominaba en ese momento.
 				</p>
 				<br />
 				<p>
@@ -148,7 +148,7 @@ export const projectList = [
 			</>
 		),
 		code: "https://github.com/Luisjva/portafolio-vercel",
-		seeProject: "https://portafolio-kappa.vercel.app/en",
+		seeProject: null,
 		img: "/portafolio.jpeg",
 		id: 1,
 		position: 1,

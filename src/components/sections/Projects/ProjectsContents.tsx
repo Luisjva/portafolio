@@ -38,6 +38,16 @@ export const ProjectsContents: React.FC<{ open: boolean }> = ({ open }) => {
 		setProjectActive(newId);
 	};
 
+	const redirect = (
+		event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+		url: string | null
+	) => {
+		event.stopPropagation();
+		if (url) {
+			window.open(url, "_blank");
+		}
+	};
+
 	return (
 		<motion.div
 			className={`modal-closed ${open && "modal-open open"}`}
@@ -61,12 +71,22 @@ export const ProjectsContents: React.FC<{ open: boolean }> = ({ open }) => {
 						<div>{projectActive.description()}</div>
 					</div>
 					<div className="projects__content__actions">
-						<Button color="#fff5" radius={"md"}>
+						<Button
+							color="#fff5"
+							radius={"md"}
+							onClick={(e) => redirect(e, projectActive.code)}
+						>
 							Ver código
 						</Button>
-						<Button color="#fff5" radius={"md"}>
-							Ver proyecto
-						</Button>
+						{projectActive.seeProject && (
+							<Button
+								color="#fff5"
+								radius={"md"}
+								onClick={(e) => redirect(e, projectActive.seeProject)}
+							>
+								Ver proyecto
+							</Button>
+						)}
 					</div>
 				</div>
 			</motion.div>

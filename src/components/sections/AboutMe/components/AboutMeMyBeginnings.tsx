@@ -176,8 +176,8 @@ export const AboutMeMyBeginnings = () => (
 				<br />
 				En ese momento, todo era por diversión, pero al empezar a aprender{" "}
 				<b>JavaScript</b> y descubrir todo su potencial, decidí dedicarme de
-				manera más seria al mundo de la programación. Aprendí los principios
-				básicos de <b>JavaScript</b> y comencé a estudiar <b>React</b>.
+				manera más seria al mundo de la programación. Seguí profundizando en mis
+				conocimientos y comencé a estudiar <b>React</b>.
 				<br />
 				<br />
 				Con el tiempo, adquirí un sólido dominio de librerías frontend como

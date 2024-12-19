@@ -1,5 +1,5 @@
 import { colors } from "@/config";
-import { Box, Button, Group, Text } from "@mantine/core";
+import { Box, Text } from "@mantine/core";
 import { motion } from "framer-motion";
 import { container } from "../AboutMeContent";
 
@@ -49,7 +49,7 @@ export const AboutMeHeader: React.FC<{ open: boolean }> = ({ open }) => {
 					experiencias de usuario excepcionales que impulsan la eficiencia y la
 					satisfacción del cliente.
 				</Text>
-				{open && (
+				{/* {open && (
 					<Box mt={"1rem"}>
 						<Group justify="start" gap="xs">
 							<Button radius={"md"} color={colors.primary} w={193}>
@@ -65,7 +65,7 @@ export const AboutMeHeader: React.FC<{ open: boolean }> = ({ open }) => {
 							</Button>
 						</Group>
 					</Box>
-				)}
+				)} */}
 			</Box>
 		</motion.div>
 	);

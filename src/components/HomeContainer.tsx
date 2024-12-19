@@ -96,7 +96,12 @@ const HomeContainer: React.FC<{
 				}}
 			>
 				<span className="close-button">
-					<ActionIcon variant="light" radius="sm" onClick={handleClosed}>
+					<ActionIcon
+						variant="light"
+						radius="sm"
+						onClick={handleClosed}
+						aria-label="close modal"
+					>
 						<XMarkIcon style={{ width: "70%", height: "70%" }} />
 					</ActionIcon>
 				</span>

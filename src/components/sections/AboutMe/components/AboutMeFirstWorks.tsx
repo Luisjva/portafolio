@@ -1,6 +1,4 @@
-import { colors } from "@/config";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import { Box, Button, Text } from "@mantine/core";
+import { Box, Text } from "@mantine/core";
 import { motion } from "framer-motion";
 import { container } from "../AboutMeContent";
 
@@ -35,14 +33,14 @@ export const AboutMeFirstWorks = () => (
 					Buscar trabajo no fue una tarea fácil, pero con perseverancia y
 					determinación, todo es posible
 				</Text>
-				<Button
+				{/* <Button
 					variant="light"
 					rightSection={<ArrowRightIcon width="1rem" />}
 					color={colors.blue.light}
 					mt={"1rem"}
 				>
 					Ver toda la experiencia laboral
-				</Button>
+				</Button> */}
 			</Box>
 		</Box>
 	</motion.div>

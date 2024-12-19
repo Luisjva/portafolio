@@ -80,8 +80,7 @@ export const workExperience = [
 				</List.Item>
 				<List.Item>
 					<b>Mantuve una comunicación eficiente con los clientes</b> para
-					satisfacer sus necesidades y asegurar su satisfacción con los
-					resultados.
+					asegurar su satisfacción con el producto.
 				</List.Item>
 			</List>
 		),
