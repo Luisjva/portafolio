@@ -147,7 +147,7 @@ export const AboutMeMyBeginnings = () => (
 					opacity: 0.8,
 				}}
 			>
-				Mis inicios
+				My beginnings
 			</Text>
 			<Text
 				style={{
@@ -156,8 +156,8 @@ export const AboutMeMyBeginnings = () => (
 				}}
 				mt={".25rem"}
 			>
-				La pandemia transformó la vida de muchas personas. En mi caso, fue el
-				punto de partida para adentrarme en el mundo de la programación.
+				The pandemic transformed many people's lives. In my case, it was the
+				starting point for diving into the world of programming.
 			</Text>
 			<Text
 				mt={"1rem"}
@@ -166,24 +166,24 @@ export const AboutMeMyBeginnings = () => (
 					opacity: 0.8,
 				}}
 			>
-				Cuando comenzó la pandemia y tuve mucho tiempo libre, decidí aprender{" "}
-				<b>HTML</b> a través de cursos en YouTube con la idea de crear páginas
-				web atractivas. Al principio, mis páginas no eran muy llamativas, pero
-				al aprender <b>CSS</b> y poder agregar estilos, todo mejoró
-				considerablemente. Sin embargo, aún necesitaba mejorar mucho mis
-				habilidades de programación.
+				When the pandemic started and I had a lot of free time, I decided to
+				learn <b>HTML</b> through YouTube courses with the idea of creating
+				attractive websites. At first, my pages weren't very appealing, but
+				after learning <b>CSS</b> and being able to add styles, everything
+				improved considerably. However, I still needed to improve my programming
+				skills significantly.
 				<br />
 				<br />
-				En ese momento, todo era por diversión, pero al empezar a aprender{" "}
-				<b>JavaScript</b> y descubrir todo su potencial, decidí dedicarme de
-				manera más seria al mundo de la programación. Seguí profundizando en mis
-				conocimientos y comencé a estudiar <b>React</b>.
+				At that time, it was all for fun, but when I started learning{" "}
+				<b>JavaScript</b> and discovered its full potential, I decided to take
+				programming more seriously. I continued deepening my knowledge and began
+				studying <b>React</b>.
 				<br />
 				<br />
-				Con el tiempo, adquirí un sólido dominio de librerías frontend como
-				React, Vue y Next.js. Creé varios proyectos personales para construir un
-				pequeño portafolio, lo que me permitió emprender la búsqueda de mi
-				primera experiencia laboral.
+				Over time, I gained solid mastery of frontend libraries like React, Vue,
+				and Next.js. I created several personal projects to build a small
+				portfolio, which allowed me to start searching for my first work
+				experience.
 			</Text>
 		</Box>
 	</motion.div>

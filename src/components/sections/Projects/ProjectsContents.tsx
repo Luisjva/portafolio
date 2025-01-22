@@ -56,13 +56,16 @@ export const ProjectsContents: React.FC<{ open: boolean }> = ({ open }) => {
 			animate="visible"
 		>
 			<motion.div variants={item}>
-				<Text style={{ fontWeight: 600, fontSize: "1.2rem" }}>Proyectos</Text>
+				<Text style={{ fontWeight: 600, fontSize: "1.2rem" }}>Projects</Text>
 			</motion.div>
 			<motion.div variants={item} className="projects__container">
 				<div className="projects__content">
 					<div className="projects__info">
 						<ProjectsImgList changeProjectActiveId={changeProjectActiveId} />
-						<h3>{projectActive.name}</h3>
+						<h3>
+							{projectActive?.inProgress && <i>Project in progress:</i>}{" "}
+							{projectActive.name}
+						</h3>
 						<p className="projects__content__technologies">
 							{projectActive.technologies.map((value) => (
 								<span key={value}>{value}</span>
@@ -75,16 +78,18 @@ export const ProjectsContents: React.FC<{ open: boolean }> = ({ open }) => {
 							color="#fff5"
 							radius={"md"}
 							onClick={(e) => redirect(e, projectActive.code)}
+							disabled={projectActive?.inProgress}
 						>
-							Ver código
+							View code
 						</Button>
 						{projectActive.seeProject && (
 							<Button
 								color="#fff5"
 								radius={"md"}
 								onClick={(e) => redirect(e, projectActive.seeProject)}
+								disabled={projectActive?.inProgress}
 							>
-								Ver proyecto
+								View project
 							</Button>
 						)}
 					</div>

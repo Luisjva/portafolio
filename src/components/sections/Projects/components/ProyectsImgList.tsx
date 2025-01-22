@@ -1,4 +1,5 @@
 import { projectList } from "@/constants/projectsList";
+import { Skeleton } from "@mantine/core";
 import React, { useState } from "react";
 
 export const ProjectsImgList: React.FC<{
@@ -28,13 +29,24 @@ export const ProjectsImgList: React.FC<{
 	return (
 		<>
 			{projectsListSort.map((item) => (
-				<img
-					key={item.id}
-					src={item.img}
-					alt={`imagen del proyecto ${item.name}`}
-					className={`projects__image p${item.position}`}
-					onClick={() => handleClickImg(item)}
-				/>
+				<>
+					{item?.inProgress ? (
+						<div
+							className={`projects__image p${item.position} projects__image__skeleton`}
+							onClick={() => handleClickImg(item)}
+						>
+							This project is in progress
+						</div>
+					) : (
+						<img
+							key={item.id}
+							onClick={() => handleClickImg(item)}
+							src={item.img}
+							alt={`imagen del proyecto ${item.name}`}
+							className={`projects__image p${item.position}`}
+						/>
+					)}
+				</>
 			))}
 		</>
 	);

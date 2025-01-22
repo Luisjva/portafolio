@@ -49,7 +49,7 @@ export const ExperienceClosed: React.FC<{ open: boolean }> = ({ open }) => {
 		>
 			<motion.div variants={item}>
 				<Text style={{ fontWeight: 600, fontSize: "1.2rem" }}>
-					Experiencia laboral
+					Work Experience
 				</Text>
 			</motion.div>
 			<motion.div variants={item}>

@@ -9,117 +9,112 @@ import { ForwardRefExoticComponent, SVGProps } from "react";
 export const workExperience = [
 	{
 		enterpriseName: "Nolatech",
-		durationTime: "Enero 2023 - Actualidad",
-		location: "Remoto",
+		durationTime: "January 2023 - Present",
+		location: "Remote",
 		jobPosition: "Frontend Developer",
 		jobDescriptionShort:
-			"• Desarrolle diversos Paneles Administrativos (HUB/CMS) con features bajo demanda, para múltiples clientes, con el objetivo de manejar información de alto impacto realizados con React.js y Next.js, con herramientas como Redux, Mui, Mantine, entre otras",
+			"• Developed various Administrative Panels (HUB/CMS) with on-demand features for multiple clients, aimed at managing high-impact information, built with React.js and Next.js, using tools such as Redux, Mui, Mantine, among others",
 		icon: BoltIcon,
 		jobDescription: (
 			<List spacing="md" center>
 				<List.Item>
-					<b>Desarrolle diversos Paneles Administrativos (HUB/CMS)</b> con
-					features bajo demanda, para múltiples clientes, con el objetivo de
-					manejar información de alto impacto realizados con React.js y Next.js,
-					con herramientas como Redux, Mui, Mantine, Socket.io, entre otras. La
-					implementación de estos paneles aumentó la productividad de los
-					clientes en un 30% al simplificar los flujos de trabajo y automatizar
-					tareas repetitivas.
+					<b>Developed various Administrative Panels (HUB/CMS)</b> with
+					on-demand features for multiple clients, aimed at managing high-impact
+					information, built with React.js and Next.js, using tools such as
+					Redux, Mui, Mantine, Socket.io, among others. The implementation of
+					these panels increased client productivity by 30% by simplifying
+					workflows and automating repetitive tasks.
 				</List.Item>
 				<List.Item>
-					<b>Optimicé de forma satisfactoria en un 50%</b> el rendimiento de 3
-					proyectos existentes de la empresa a través de la modularización de
-					los componentes existentes y adición de nuevos componentes.
+					<b>Successfully optimized by 50%</b> the performance of 3 existing
+					company projects through the modularization of existing components and
+					addition of new components.
 				</List.Item>
 				<List.Item>
-					<b>Diseñé y desarrollé landing pages de alto impacto</b> con
-					animaciones interactivas para productos y servicios de aplicaciones,
-					logrando un aumento del 40% en la tasa de conversión de usuarios. Las
-					animaciones cuidadosamente implementadas mejoran el atractivo de los
-					servicios de los clientes, incrementando el tiempo de permanencia en
-					un 25%.
-				</List.Item>
-				<List.Item>
-					<b>
-						Desarrollé una librería para agilizar la creación de Paneles
-						administrativos para aplicaciones
-					</b>
-					, lo que mejoró considerablemente la velocidad de desarrollo en la
-					empresa en este aspecto en específico.
+					<b>Designed and developed high-impact landing pages</b> with
+					interactive animations for application products and services,
+					achieving a 40% increase in user conversion rate. The carefully
+					implemented animations enhance the appeal of client services,
+					increasing dwell time by 25%.
 				</List.Item>
 				<List.Item>
 					<b>
-						Desarrollé versiones web de aplicaciones existentes en la empresa
+						Developed a library to streamline the creation of administrative
+						panels for applications
 					</b>
-					, ampliando así su alcance y mejorando la interacción con los
-					clientes, principalmente aplicaciones web de mensajería.
+					, which significantly improved development speed in the company for
+					this specific aspect.
+				</List.Item>
+				<List.Item>
+					<b>Developed web versions of existing company applications</b>,
+					expanding their reach and improving client interaction, primarily
+					messaging web applications.
 				</List.Item>
 			</List>
 		),
 	},
 	{
 		enterpriseName: "Freelancer",
-		durationTime: "Julio 2022 – Diciembre 2022",
-		location: "Remoto",
+		durationTime: "July 2022 – December 2022",
+		location: "Remote",
 		jobPosition: "Fullstack Developer",
 		jobDescriptionShort:
-			"Desarrollé una solución integral para un pequeño establecimiento local con Next.js y MySQL, que incluyó:",
+			"Developed and optimized projects of various kinds, taking on support roles to correct and improve existing functionalities",
 		icon: MegaphoneIcon,
 		jobDescription: (
 			<List spacing="md" center>
 				<List.Item>
-					<b>Desarrollé y optimicé proyectos de diversa índole</b> asumiendo
-					roles de soporte para corregir y mejorar funcionalidades existentes,
-					así como resolver bugs, reduciendo hasta un 15% los tiempos de carga
-					de los productos del cliente.
+					<b>Developed and optimized projects of various kinds</b> taking on
+					support roles to correct and improve existing functionalities, as well
+					as resolve bugs, reducing client product loading times by up to 15%.
 				</List.Item>
 				<List.Item>
-					<b>Inicié y lideré proyectos desde cero</b>, priorizando la calidad y
-					la eficiencia en cada etapa del desarrollo. Utilicé tecnologías como
-					React, Node.js y MongoDB para crear aplicaciones web robustas.
+					<b>Initiated and led projects from scratch</b>, prioritizing quality
+					and efficiency at each stage of development. Used technologies such as
+					React, Node.js, and MongoDB to create robust web applications.
 				</List.Item>
 				<List.Item>
-					<b>Mantuve una comunicación eficiente con los clientes</b> para
-					asegurar su satisfacción con el producto.
+					<b>Maintained efficient communication with clients</b> to ensure their
+					satisfaction with the product.
 				</List.Item>
 			</List>
 		),
 	},
 	{
 		enterpriseName: "Ultrabodegon",
-		durationTime: "Enero 2022– Julio 2022",
-		location: "Remoto",
+		durationTime: "January 2022– July 2022",
+		location: "Remote",
 		jobPosition: "Fullstack Developer",
 		jobDescriptionShort:
-			"Desarrollé una solución integral para un pequeño establecimiento local con Next.js y MySQL, que incluyó:",
+			"Developed a comprehensive solution for a small local establishment using Next.js and MySQL, which included:",
 		icon: BuildingLibraryIcon,
 		jobDescription: (
 			<>
 				<b>
-					Desarrollé una solución integral para un pequeño establecimiento local
-					con Next.js y MySQL, que incluyó
+					Developed a comprehensive solution for a small local establishment
+					using Next.js and MySQL, which included
 				</b>
 				:
 				<List spacing="md" center mt={"1rem"}>
 					<List.Item>
-						<b>Administración de inventario</b>: Implementación de un sistema
-						eficiente para gestionar el stock de productos.
+						<b>Inventory management</b>: Implementation of an efficient system
+						to manage product stock.
 					</List.Item>
 					<List.Item>
-						<b>Visualización de productos</b>: Creación de una interfaz amigable
-						para mostrar la lista de productos a los usuarios.
+						<b>Product visualization</b>: Creation of a user-friendly interface
+						to display the product list to users.
 					</List.Item>
 					<List.Item>
-						<b>Flujo de compras</b>: Diseño de un proceso de compra intuitivo y
-						fluido.
+						<b>Purchase flow</b>: Design of an intuitive and fluid purchase
+						process.
 					</List.Item>
 					<List.Item>
-						<b>Estadísticas de compra</b>: Generación de informes detallados
-						sobre las compras de los usuarios.
+						<b>Purchase statistics</b>: Generation of detailed reports on user
+						purchases.
 					</List.Item>
 					<List.Item>
-						<b>Diseño dinámico y responsivo</b>: Asegurando una experiencia de
-						usuario óptima en dispositivos web y móviles.
+						<b>Dynamic and responsive design</b>: Ensuring optimal user
+						experience on web and mobile devices.
 					</List.Item>
 				</List>
 			</>
@@ -128,7 +123,7 @@ export const workExperience = [
 ] as {
 	enterpriseName: string;
 	durationTime: string;
-	location: "Remoto";
+	location: "Remote";
 	jobDescriptionShort: string;
 	jobDescription: JSX.Element;
 	jobPosition: string;

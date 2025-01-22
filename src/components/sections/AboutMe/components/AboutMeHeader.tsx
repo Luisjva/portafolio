@@ -38,16 +38,16 @@ export const AboutMeHeader: React.FC<{ open: boolean }> = ({ open }) => {
 					}}
 					className="about-me__header__title"
 				>
-					Desarrollador Frontend con 3 años de experiencia en React
+					Frontend Developer with 3 years of experience in React
 				</Text>
 				<Text
 					color={open ? "#000c" : "#fff"}
 					mt={".5rem"}
 					className="about-me__header__content"
 				>
-					Mi enfoque esta en combinar funcionalidad y diseño para ofrecer
-					experiencias de usuario excepcionales que impulsan la eficiencia y la
-					satisfacción del cliente.
+					My focus is on combining functionality and design to deliver
+					exceptional user experiences that drive efficiency and customer
+					satisfaction.
 				</Text>
 				{/* {open && (
 					<Box mt={"1rem"}>

@@ -1,7 +1,6 @@
 import { AboutMeHeader as Header } from "./components/AboutMeHeader";
 import { AboutMeMyBeginnings as Beginnings } from "./components/AboutMeMyBeginnings";
 import "./AboutMe.css";
-import { AboutMeFirstWorks as FirstWorks } from "./components/AboutMeFirstWorks";
 
 export const container = {
 	hidden: { opacity: 1, scale: 0 },
@@ -24,7 +23,7 @@ export const AboutMeContent: React.FC<{ open: boolean }> = ({ open }) => {
 			{open && (
 				<>
 					<Beginnings />
-					<FirstWorks />
+					{/* <FirstWorks /> */}
 				</>
 			)}
 		</div>

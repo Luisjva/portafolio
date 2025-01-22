@@ -79,9 +79,7 @@ export const Cv: React.FC<{
 									fontSize: "2rem",
 								}}
 							>
-								<Text style={{ fontWeight: 600, fontSize: "100%" }}>
-									Curriculum
-								</Text>
+								<Text style={{ fontWeight: 600, fontSize: "100%" }}>CV</Text>
 							</Box>
 						</>
 					)}

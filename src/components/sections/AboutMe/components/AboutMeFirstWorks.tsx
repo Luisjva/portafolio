@@ -21,7 +21,7 @@ export const AboutMeFirstWorks = () => (
 						opacity: 0.8,
 					}}
 				>
-					Primeras experiencias laborales
+					First work experiences
 				</Text>
 				<Text
 					style={{
@@ -30,8 +30,8 @@ export const AboutMeFirstWorks = () => (
 					}}
 					mt={".25rem"}
 				>
-					Buscar trabajo no fue una tarea fácil, pero con perseverancia y
-					determinación, todo es posible
+					Finding a job wasn't an easy task, but with perseverance and
+					determination, everything is possible
 				</Text>
 				{/* <Button
 					variant="light"
@@ -39,7 +39,7 @@ export const AboutMeFirstWorks = () => (
 					color={colors.blue.light}
 					mt={"1rem"}
 				>
-					Ver toda la experiencia laboral
+					See all work experience
 				</Button> */}
 			</Box>
 		</Box>

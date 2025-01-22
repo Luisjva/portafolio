@@ -66,7 +66,7 @@ export const ReferenciesContent: React.FC<{ open: boolean }> = ({ open }) => {
 		>
 			<motion.div variants={item}>
 				<Text style={{ fontWeight: 600, fontSize: "1.2rem" }}>
-					Referencias personales
+					Personal References
 				</Text>
 			</motion.div>
 			<motion.div variants={item} style={{ marginTop: open ? "2rem" : "" }}>

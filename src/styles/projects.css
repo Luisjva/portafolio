@@ -55,6 +55,12 @@
 	gap: 1rem;
 	margin-top: 0.5rem;
 }
+.mantine-Button-root:hover {
+	background-color: #fff4;
+}
+.mantine-Button-root[disabled] {
+	background-color: #fff3;
+}
 
 .projects__image {
 	position: absolute;
@@ -62,6 +68,31 @@
 	object-fit: cover;
 	object-position: top;
 	border-radius: 0.5rem;
+}
+.projects__image__skeleton {
+	background-image: linear-gradient(
+		-45deg,
+		#2f3551 25%,
+		#4dacff00 50%,
+		#2f3551 75%
+	);
+	background-size: 100% 200%;
+	animation: loading 3s infinite;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.2rem;
+	padding: 5%;
+}
+@keyframes loading {
+	0% {
+		background-position: 0 200%;
+	}
+	100% {
+		background-position: 0 -200%;
+	}
 }
 .projects__image.p0 {
 	width: 40%;
