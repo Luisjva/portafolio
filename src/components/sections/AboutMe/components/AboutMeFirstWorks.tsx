@@ -30,7 +30,7 @@ export const AboutMeFirstWorks = () => (
 					}}
 					mt={".25rem"}
 				>
-					Finding a job wasn't an easy task, but with perseverance and
+					Finding a job wasn&apos;t an easy task, but with perseverance and
 					determination, everything is possible
 				</Text>
 				{/* <Button

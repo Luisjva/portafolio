@@ -1,5 +1,4 @@
 import { projectList } from "@/constants/projectsList";
-import { Skeleton } from "@mantine/core";
 import React, { useState } from "react";
 
 export const ProjectsImgList: React.FC<{

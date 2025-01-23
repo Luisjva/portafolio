@@ -156,8 +156,8 @@ export const AboutMeMyBeginnings = () => (
 				}}
 				mt={".25rem"}
 			>
-				The pandemic transformed many people's lives. In my case, it was the
-				starting point for diving into the world of programming.
+				The pandemic transformed many people&apos;s lives. In my case, it was
+				the starting point for diving into the world of programming.
 			</Text>
 			<Text
 				mt={"1rem"}
@@ -168,7 +168,7 @@ export const AboutMeMyBeginnings = () => (
 			>
 				When the pandemic started and I had a lot of free time, I decided to
 				learn <b>HTML</b> through YouTube courses with the idea of creating
-				attractive websites. At first, my pages weren't very appealing, but
+				attractive websites. At first, my pages weren&apos;t very appealing, but
 				after learning <b>CSS</b> and being able to add styles, everything
 				improved considerably. However, I still needed to improve my programming
 				skills significantly.
